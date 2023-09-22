@@ -13,6 +13,14 @@ mongoose
     console.log(err)
   })
 
+// esto aplica a toda la aplicación
+/* const simpleMiddleware = (req, res, next) => {
+  console.log('Hola soy el middlewarew')
+  next()
+} */
+
+// app.use(simpleMiddleware)
+
 app.use(express.json())
 app.use(router)
 
