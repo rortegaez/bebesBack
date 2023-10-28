@@ -1,3 +1,5 @@
+// aquí tenemos el esquema de como debe de ser el elamento user
+
 const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema

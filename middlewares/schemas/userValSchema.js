@@ -1,3 +1,4 @@
+// esquema de validación del elemento user
 const Joi = require('joi')
 
 const userSchema = Joi.object()

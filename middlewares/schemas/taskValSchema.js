@@ -1,3 +1,4 @@
+// esquema de validación del elemento task
 const Joi = require('joi')
 
 const taskSchema = Joi.object()

@@ -5,6 +5,7 @@ const router = require('./routes')
 
 require('dotenv').config()
 
+// conectamos con mongo
 mongoose
   . connect(`mongodb+srv://${process.env.USER}:${process.env.PASS}@cluster0.2tjxv97.mongodb.net/?retryWrites=true&w=majority`)
   .then(() => {
@@ -21,9 +22,10 @@ mongoose
 
 // app.use(simpleMiddleware)
 
-app.use(express.json())
-app.use(router)
+app.use(express.json()) // para poder procesar los json
+app.use(router) // para usar las route
 
+// cuando nos conecta al puerto 3000, no slo confirma que esta todo ok
 app.listen(3000, () => {
   console.log('App is listening on port 3000')
 })

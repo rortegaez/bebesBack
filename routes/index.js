@@ -1,3 +1,5 @@
+// el index, desde el cual llegamos a todas las routes
+
 const express = require('express')
 const router = express.Router()
 const userRouter = require('./userRoutes')
