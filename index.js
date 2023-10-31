@@ -2,10 +2,10 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const router = require('./routes')
+const cors = require('cors')
 
 require('dotenv').config()
 
-// conectamos con mongo
 mongoose
   . connect(`mongodb+srv://${process.env.USER}:${process.env.PASS}@cluster0.2tjxv97.mongodb.net/?retryWrites=true&w=majority`)
   .then(() => {
@@ -22,6 +22,7 @@ mongoose
 
 // app.use(simpleMiddleware)
 
+app.use(cors()) // para evitar los errores de puertos por seguridad en localhost
 app.use(express.json()) // para poder procesar los json
 app.use(router) // para usar las route
 
